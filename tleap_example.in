@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip4pb
+A = loadpdb example.pdb
+check A 
+addions A Cl- 0
+addions A Na+ 0
+solvateoct A TIP4PBBOX 10
+addions A Cl- 68
+addions A Na+ 68
+charge A
+saveamberparm A example.top example.crd
+quit
